@@ -5,14 +5,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.wy.wyandroidsdk.widgets.WyVideoView;
 import com.wy.wyandroidsdk.zxing.android.CaptureActivity;
 import com.wy.wyandroidsdk.zxing.common.Constant;
 
@@ -29,6 +32,52 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        ConstraintLayout constraintLayout=findViewById(R.id.cl);
+        WyVideoView wyVideoView=new WyVideoView(this,null,constraintLayout);
+        wyVideoView.setListener(new WyVideoView.ADVideoPlayerListener() {
+            @Override
+            public void onBufferUpdate(int time) {
+
+            }
+
+            @Override
+            public void onClickFullScreenBtn() {
+
+            }
+
+            @Override
+            public void onClickVideo() {
+
+            }
+
+            @Override
+            public void onClickBackBtn() {
+
+            }
+
+            @Override
+            public void onClickPlay() {
+
+            }
+
+            @Override
+            public void onAdVideoLoadSuccess() {
+
+            }
+
+            @Override
+            public void onAdVideoLoadFailed() {
+
+            }
+
+            @Override
+            public void onAdVideoLoadComplete() {
+
+            }
+        });
+        wyVideoView.setDataSource("http://okxxzy.xzokzyzy.com/20190728/23849_9b8076fd/Avengers Endgame.2019.1080p.mp4");
+        constraintLayout.addView(wyVideoView);
+
         findViewById(R.id.tv_text).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
