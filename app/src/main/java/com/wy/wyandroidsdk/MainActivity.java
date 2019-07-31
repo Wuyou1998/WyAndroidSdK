@@ -13,7 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.wy.wyandroidsdk.zxing.app.CaptureActivity;
+import com.wy.wyandroidsdk.zxing.android.CaptureActivity;
+import com.wy.wyandroidsdk.zxing.common.Constant;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(this,data.getStringExtra("SCAN_RESULT"),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,data.getStringExtra(Constant.CODED_CONTENT),Toast.LENGTH_SHORT).show();
     }
 
     private void checkPermissions() {

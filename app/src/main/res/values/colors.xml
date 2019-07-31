@@ -3,12 +3,17 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <!-- QR_Code -->
-    <color name="viewfinder_mask">#60000000</color>
-    <color name="result_view">#b0000000</color>
-    <color name="possible_result_points">#c0ffff00</color>
-    <color name="result_image_border">#ffffffff</color>
-    <color name="result_minor_text">#ffc0c0c0</color>
-    <color name="result_points">#c000ff00</color>
-    <color name="system_bar_color">#fed952</color>
+    <!--zxing-->
+    <color name="contents_text">#000000</color>
+    <color name="encode_view">#ffffff</color>
+    <color name="possible_result_points">#ffbd21</color>
+    <color name="result_minor_text">#c0c0c0</color>
+    <color name="result_points">#99cc00</color>
+    <color name="result_text">#ffffff</color>
+    <color name="result_view">#000000</color>
+    <color name="status_text">#ffffff</color>
+    <color name="viewfinder_mask">#50000000</color>
+    <color name="react">#ffffff</color>
+    <color name="scanLineColor">#ffffff</color>
+    <color name="defaultColor">#ffffff</color>
 </resources>
