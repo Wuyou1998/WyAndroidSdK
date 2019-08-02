@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">WyAndroidSdk</string>
-    <!-- QR_Code -->
     <!--zxing-->
     <string name="msg_camera_framework_bug">The camera is occupied or has no camera permission, please check</string>
     <string name="button_ok">Exit</string>
