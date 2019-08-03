@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.wy.wyandroidsdk.R;
+import com.wy.wyandroidsdk.share.ShareDialog;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ public class PhotoViewActivity extends AppCompatActivity {
     private ArrayList<String> photoList;
     private int length = 0;
     public static final String PHOTO_LIST = "photo_list";
+    private int photoIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class PhotoViewActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 tv_title.setText("第" + (position + 1) + "张," + "共" + photoPageAdapter.getCount() + "张");
+                photoIndex = position;
             }
 
             @Override
@@ -76,7 +79,12 @@ public class PhotoViewActivity extends AppCompatActivity {
         iv_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO share
+                ShareDialog dialog = new ShareDialog(PhotoViewActivity.this);
+                dialog.setShareTitle("来自wuyou的分享");
+                dialog.setShareText("wuyou向你分享了如下内容:" + photoList.get(photoIndex));
+                dialog.setShareTitleUrl("https://www.imooc.com/");
+                dialog.setImagePhoto(photoList.get(photoIndex));
+                dialog.show();
             }
         });
     }

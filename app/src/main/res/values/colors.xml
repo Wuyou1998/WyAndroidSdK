@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ColorMain">#F4BC31</color>
     <!--zxing-->
     <color name="contents_text">#000000</color>
     <color name="encode_view">#ffffff</color>
